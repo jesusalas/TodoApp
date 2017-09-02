@@ -22,12 +22,11 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String IP_SERVER = "http://172.16.1.109:8000";
+    private static final String IP_SERVER = "http://172.16.1.109:5000";
     private static final String GET_TODO = "/api/todo";
 
     //@BindView(R.id.todo_recyclerview)
     private RecyclerView todoRecyclerView;
-
 
     @Override
     protected void onStart() {
