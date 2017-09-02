@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "627007205537",
+    "firebase_url": "https://multibusiness-ff625.firebaseio.com",
+    "project_id": "multibusiness-ff625",
+    "storage_bucket": "multibusiness-ff625.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627007205537:android:5a8a14a2cd6fe2a7",
+        "android_client_info": {
+          "package_name": "com.multibusiness.multibusiness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "627007205537-6qjrq9hj8jviu6manv6a8cde1liphqeh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKuWRzoFOEXddXYlnk5tTEkGoVcVKENpw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627007205537:android:9129916b4d569076",
+        "android_client_info": {
+          "package_name": "mx.com.diossa.todoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "627007205537-6qjrq9hj8jviu6manv6a8cde1liphqeh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKuWRzoFOEXddXYlnk5tTEkGoVcVKENpw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
