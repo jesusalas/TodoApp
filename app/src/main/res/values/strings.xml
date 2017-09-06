@@ -1,3 +1,12 @@
-<resources>
-    <string name="app_name">TodoApp</string>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>.
+    <string name="app_name">Adeudos</string>
+    <string name="debt_instructions">
+        Escribe tu salario mensual para estimar el máximo de deudas que puedes tener
+    </string>
+    <string name="debt_salary_hint">Salario</string>
+    <string name="debt_calculate_button">Calcular</string>
+    <string name="debt_answer">"El maximo de deudas soportadas son: "</string>
+
+
 </resources>

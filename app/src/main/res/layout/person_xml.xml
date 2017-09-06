@@ -17,14 +17,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:text="Escribe tu salario mensual para estimar el maximo de deudas que debes tener"/>
+        android:text="@string/debt_instructions"/>
 
     <EditText
         android:id="@+id/txt_salary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:hint="Salario"
+        android:hint="@string/debt_salary_hint"
         android:textSize="20dp" />
 
     <Button
@@ -32,10 +32,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:text="Calcular"/>
+        android:text="@string/debt_calculate_button"/>
 
     <TextView
-        android:id="@+id/response"
+        android:id="@+id/answer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"/>

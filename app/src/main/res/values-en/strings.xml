@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Debts</string>
+    <string name="debt_instructions">
+        Write your monthly salary to estimate the maximum of debt that you may have
+    </string>
+    <string name="debt_salary_hint">Salary</string>
+    <string name="debt_calculate_button">Calculate</string>
+    <string name="debt_answer">"The maximum are: "</string>
+</resources>
