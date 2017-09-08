@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 public class MainPerson extends Activity implements View.OnClickListener  {
 
+    public static final String USERNAME = "user";
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -57,6 +59,8 @@ public class MainPerson extends Activity implements View.OnClickListener  {
             case R.id.btn_loggin_debt:
 
                 Intent login = new Intent(this, LoginActivity.class );
+                login.putExtra(USERNAME,"jsalas");
+                login.putExtra("pass","123");
                 startActivity(login);
                 break;
 
