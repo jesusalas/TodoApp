@@ -1,4 +1,4 @@
-package mx.com.diossa.todoapp;
+package mx.com.diossa.adeudosapp;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;

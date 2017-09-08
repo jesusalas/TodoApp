@@ -1,4 +1,4 @@
-package mx.com.diossa.todoapp;
+package mx.com.diossa.adeudosapp;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

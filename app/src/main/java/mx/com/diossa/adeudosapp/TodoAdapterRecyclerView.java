@@ -1,4 +1,4 @@
-package mx.com.diossa.todoapp;
+package mx.com.diossa.adeudosapp;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
