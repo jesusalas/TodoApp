@@ -13,14 +13,18 @@ public class DebtDetail extends AppCompatActivity {
 
         TextView response = (TextView)findViewById(R.id.txt_response);
 
-        Bundle extras = getIntent().getExtras();
+       /* Bundle extras = getIntent().getExtras();
 
         String creditor = extras.getString("creditor");
-        String total = extras.getString("total");
-        String months = extras.getString("months");
-        String date = extras.getString("date");
+        Double total = extras.getDouble("total");
+        int months = extras.getInt("months");
+        String date = extras.getString("date");*/
 
-        response.setText(String.format("%s\n%s\n%s\n%s\n",creditor,total,months,date));
+        Debt debt = (Debt)getIntent().getParcelableExtra("deuda");
+
+        //response.setText(String.format("%s\n%s\n%s\n%s\n",creditor,total,months,date));
+        response.setText(String.format("%s\n%s\n%s\n%s\n",debt.getCreditor(),debt.getTotal(),debt.getMonths(),debt.getDate()));
+        //response.setText(String.format("%s\n%s\n%s\n%s\n","hola","me","andas","cagando"));
 
 
     }

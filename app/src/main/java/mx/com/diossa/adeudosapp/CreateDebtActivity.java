@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class CreateDebtActivity extends AppCompatActivity {
 
@@ -31,7 +32,7 @@ public class CreateDebtActivity extends AppCompatActivity {
                 deuda.setMonths(Integer.parseInt(months.getText().toString()));
                 deuda.setDate(date.getText().toString());
 
-                Intent createView = new Intent (CreateDebtActivity.this,DebtDetail.class);
+                Intent detailActivity = new Intent (CreateDebtActivity.this,DebtDetail.class);
                 /*
                 createView.putExtra("total",total.getText().toString());
                 createView.putExtra("months",months.getText().toString());
@@ -39,14 +40,13 @@ public class CreateDebtActivity extends AppCompatActivity {
                 createView.putExtra("date",date.getText().toString());
                 */
 
-                System.out.println(deuda.getMonths());
-                System.out.println(deuda.getTotal());
-                createView.putExtra("creditor",deuda.getCreditor());
+              /*  createView.putExtra("creditor",deuda.getCreditor());
                 createView.putExtra("total",deuda.getTotal());
                 createView.putExtra("months",deuda.getMonths());
-                createView.putExtra("date",deuda.getDate());
+                createView.putExtra("date",deuda.getDate());*/
 
-                startActivity(createView);
+                detailActivity.putExtra("deuda",deuda);
+                startActivity(detailActivity);
             }
         });
     }
