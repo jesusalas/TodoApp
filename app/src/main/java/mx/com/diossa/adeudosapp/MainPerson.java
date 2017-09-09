@@ -54,7 +54,8 @@ public class MainPerson extends Activity implements View.OnClickListener  {
         switch (view.getId()){
 
             case R.id.btn_exit_dbt:
-                Toast.makeText(getApplicationContext(),"Estas seguro de salir ?", Toast.LENGTH_SHORT).show();
+                Intent crear_debt = new Intent(this, CreateDebtActivity.class);
+                startActivity(crear_debt);
                 break;
             case R.id.btn_loggin_debt:
 
