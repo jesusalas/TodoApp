@@ -2,7 +2,12 @@ package mx.com.diossa.adeudosapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DebtDetail extends AppCompatActivity {
 
@@ -11,20 +16,19 @@ public class DebtDetail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_debt_detail);
 
-        TextView response = (TextView)findViewById(R.id.txt_response);
-
-       /* Bundle extras = getIntent().getExtras();
-
-        String creditor = extras.getString("creditor");
-        Double total = extras.getDouble("total");
-        int months = extras.getInt("months");
-        String date = extras.getString("date");*/
+        ListView debtListView = (ListView)findViewById(R.id.list_debt);
 
         Debt debt = (Debt)getIntent().getParcelableExtra("deuda");
+        ArrayList<Debt> debtArrayList = new ArrayList<>();
 
-        //response.setText(String.format("%s\n%s\n%s\n%s\n",creditor,total,months,date));
-        response.setText(String.format("%s\n%s\n%s\n%s\n",debt.getCreditor(),debt.getTotal(),debt.getMonths(),debt.getDate()));
-        //response.setText(String.format("%s\n%s\n%s\n%s\n","hola","me","andas","cagando"));
+
+        debtArrayList.add(debt);
+        debtArrayList.add(new Debt("coppel",150,8,"2018"));
+
+        DebtListAdapter debtListAdapter = new DebtListAdapter(this,R.layout.debt_item,debtArrayList);
+        debtListView.setAdapter(debtListAdapter);
+
+        
 
 
     }

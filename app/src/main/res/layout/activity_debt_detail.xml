@@ -11,8 +11,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="mx.com.diossa.adeudosapp.DebtDetail">
 
-    <TextView
-        android:id="@+id/txt_response"
+    <ListView
+        android:id="@+id/list_debt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </LinearLayout>

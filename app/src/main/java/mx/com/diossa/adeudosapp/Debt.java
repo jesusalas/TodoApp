@@ -14,9 +14,18 @@ public class Debt implements Parcelable {
     private int months;
     private String date;
 
+    public Debt(String creditor, double total,int months, String date){
+        this.creditor = creditor;
+        this.total = total;
+        this.months = months;
+        this.date = date;
+    }
+
     public Debt(){
         super();
     }
+
+
 
     public Debt(Parcel parcel) {
         this.creditor = parcel.readString();
