@@ -38,6 +38,33 @@ public class DebtListAdapter extends ArrayAdapter<Debt> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        DebtViewHolder viewHolder;
+
+        if (convertView == null){
+            LayoutInflater layoutInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = layoutInflater.inflate(layoutId,parent,false);
+
+            viewHolder = new DebtViewHolder();
+
+            viewHolder.debtImage = (ImageView)convertView.findViewById(R.id.img_debt);
+            viewHolder.debtCreditor = (TextView)convertView.findViewById(R.id.txt_debt_creditor);
+            viewHolder.debtTotal = (TextView)convertView.findViewById(R.id.txt_debt_total);
+            viewHolder.debtMonths = (TextView)convertView.findViewById(R.id.txt_debt_months);
+
+            convertView.setTag(viewHolder);
+
+        }else {
+            viewHolder = (DebtViewHolder)convertView.getTag();
+        }
+
+        Debt debt = debtArrayList.get(position);
+        viewHolder.debtImage.setImageDrawable(ContextCompat.getDrawable(context,R.mipmap.deuda));
+        viewHolder.debtCreditor.setText(debt.getCreditor());
+        viewHolder.debtTotal.setText(String.valueOf(debt.getTotal()));
+        viewHolder.debtMonths.setText(String.valueOf(debt.getMonths()));
+
+        return convertView;
+        /*
         LayoutInflater layoutInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = layoutInflater.inflate(layoutId,parent,false);
 
@@ -52,8 +79,14 @@ public class DebtListAdapter extends ArrayAdapter<Debt> {
         debtTotal.setText(String.valueOf(debt.getTotal()));
         debtMonths.setText(String.valueOf(debt.getMonths()));
 
-        return view;
+        return view;*/
     }
 
+    private class DebtViewHolder{
+        ImageView debtImage;
+        TextView debtCreditor;
+        TextView debtTotal;
+        TextView debtMonths;
+    }
 
 }
