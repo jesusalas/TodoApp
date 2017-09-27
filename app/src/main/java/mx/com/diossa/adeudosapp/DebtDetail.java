@@ -18,11 +18,11 @@ public class DebtDetail extends AppCompatActivity {
 
         ListView debtListView = (ListView)findViewById(R.id.list_debt);
 
-        Debt debt = (Debt)getIntent().getParcelableExtra("deuda");
+        //Debt debt = (Debt)getIntent().getParcelableExtra("deuda");
         ArrayList<Debt> debtArrayList = new ArrayList<>();
 
 
-        debtArrayList.add(debt);
+        //debtArrayList.add(debt);
         debtArrayList.add(new Debt("coppel",150,8,"2018"));
 
         DebtListAdapter debtListAdapter = new DebtListAdapter(this,R.layout.debt_item,debtArrayList);

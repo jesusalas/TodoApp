@@ -3,6 +3,7 @@ package mx.com.diossa.adeudosapp;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -92,14 +93,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
-
+        /*
         Bundle extras = getIntent().getExtras();
 
         String user = extras.getString(MainPerson.USERNAME);
         String pass = extras.getString("pass");
 
         mEmailView.setText(user);
-        mPasswordView.setText(pass);
+        mPasswordView.setText(pass);*/
     }
 
     private void populateAutoComplete() {
@@ -341,7 +342,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
 
             if (success) {
-                finish();
+                Intent menu_principal = new Intent(getApplicationContext(),MainPerson.class);
+                startActivity(menu_principal);
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();

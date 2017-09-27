@@ -28,24 +28,24 @@
         android:textSize="20dp" />
 
     <Button
-        android:id="@+id/btn_loggin_debt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/debt_loggin_button"
-        android:textSize="20dp" />
-
-    <Button
-        android:id="@+id/btn_exit_dbt"
+        android:id="@+id/btn_see_debt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:text="@string/debt_exit_button"/>
+        android:text="@string/debt_button"/>
 
     <Button
         android:id="@+id/btn_calculate_debt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/debt_calculate_button"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btn_exit_debt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/debt_button_exit"
         android:textSize="20dp" />
 
     <TextView
